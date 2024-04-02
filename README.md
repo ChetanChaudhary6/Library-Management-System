@@ -32,3 +32,10 @@ Vendor - View Orders
 
 Vendor - Update Stock
 ![Vendor - Update Stock](https://github.com/ChetanChaudhary6/Library-Management-System/assets/93438802/a6c284db-a4f4-49c1-a695-3f8d096fa286)
+
+Admin - ViewVendors
+![Admin - ViewVendors](https://github.com/ChetanChaudhary6/Library-Management-System/assets/93438802/12e3acd9-053e-4f61-a9e9-90d5449ce6ee)
+
+Admin - ViewOrders
+![Admin - ViewOrders](https://github.com/ChetanChaudhary6/Library-Management-System/assets/93438802/1eaf04af-bcc2-4359-a7ce-d19ae02699f4)
+
