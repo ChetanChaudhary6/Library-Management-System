@@ -1,0 +1,82 @@
+<div class="album py-5 bg-light products">
+    <div class="container">
+        <h5>Filters</h5>
+        <div class="mb-3 form-check" style="display:inline-block; margin-right:7.7%">
+            <input type="checkbox" checked onchange="General()" class="form-check-input" id="General">
+            <label class="form-check-label" for="General">General</label>
+        </div>
+        <div class="mb-3 form-check" style="display:inline-block; margin-right:7.7%">
+            <input type="checkbox" checked onchange="Science()" class="form-check-input" id="Science">
+            <label class="form-check-label" for="Science">Science</label>
+        </div>
+        <div class="mb-3 form-check" style="display:inline-block; margin-right:7.7%">
+            <input type="checkbox" checked onchange="Maths()" class="form-check-input" id="Maths">
+            <label class="form-check-label" for="Math">Maths</label>
+        </div>
+        <div class="mb-3 form-check" style="display:inline-block; margin-right:7.7%">
+            <input type="checkbox" checked onchange="Fiction()" class="form-check-input" id="Fiction">
+            <label class="form-check-label" for="Fiction">Fiction</label>
+        </div>
+        <div class="mb-3 form-check" style="display:inline-block; margin-right:7.7%">
+            <input type="checkbox" checked onchange="Economics()" class="form-check-input" id="Economics">
+            <label class="form-check-label" for="Economics">Economics</label>
+        </div>
+        <div class="mb-3 form-check" style="display:inline-block;">
+            <input type="checkbox" checked onchange="Florist()" class="form-check-input" id="Florist">
+            <label class="form-check-label" for="Florist">Florist</label>
+        </div>
+        <hr style="height: 5px;">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {{#each data}}
+            <div class="col {{this.category}}">
+                <div class="card shadow-sm">
+                    <img src="{{this.image}}" alt="product" width="400" height="400">
+
+                    <div class="card-body">
+                        <p class="card-text">{{this.name}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            
+                            <h5 class="review-count">₹ {{this.price}}</h5>
+                            <div class="ratings" id="{{this._id}}" style="margin-top: -15px;">
+                                <script>
+                                    for(var i = 0; i < Number("{{this.rating}}"); i++) {
+                                        document.getElementById("{{this._id}}").innerHTML += ` <i class="fa fa-star rating-color"> `;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <a href="/products/view/{{this._id}}"><button type="button" class="btn btn-sm btn-outline-secondary"><b>View More</b></button></a>
+                                <a href="/products/addtocart/{{this._id}}"><button type="button" class="btn btn-sm btn-outline-secondary"><b>Add To
+                                        Cart</b></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script>
+    var General = function() {
+        $(".General").toggle();
+    }
+    var Science = function() {
+        $(".Science").toggle();
+    }
+    var Maths = function() {
+        $(".Maths").toggle();
+    }
+    var Fiction = function() {
+        $(".Fiction").toggle();
+    }
+    var Economics = function() {
+        $(".Economics").toggle();
+    }
+    var Florist = function() {
+        $(".Florist").toggle();
+    }
+</script>
